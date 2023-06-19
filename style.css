@@ -1,142 +1,263 @@
-/* styles.css */
+.center-align {
+  text-align: center;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .tree {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
-  .tree ul {
-    padding-top: 20px;
-    position: relative;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-  }
-  
-  .tree li {
-    float: left;
-    text-align: center;
-    list-style-type: none;
-    position: relative;
-    padding: 20px 5px 0 5px;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-  }
-  
-  .tree li::before,
-  .tree li::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 50%;
-    border-top: 1px solid #ccc;
-    width: 50%;
-    height: 20px;
-  }
-  
-  .tree li::after {
-    right: auto;
-    left: 50%;
-    border-left: 1px solid #ccc;
-  }
-  
-  .tree li:only-child::after,
-  .tree li:only-child::before {
-    display: none;
-  }
-  
-  .tree li:only-child {
-    padding-top: 0;
-  }
-  
-  .tree li:first-child::before,
-  .tree li:last-child::after {
-    border: 0 none;
-  }
-  
-  .tree li:last-child::before {
-    border-right: 1px solid #ccc;
-    border-radius: 0 5px 0 0;
-    -webkit-border-radius: 0 5px 0 0;
-    -moz-border-radius: 0 5px 0 0;
-  }
-  
-  .tree li:first-child::after {
-    border-radius: 5px 0 0 0;
-    -webkit-border-radius: 5px 0 0 0;
-    -moz-border-radius: 5px 0 0 0;
-  }
-  
-  .tree ul ul::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    border-left: 1px solid #ccc;
-    width: 0;
-    height: 20px;
-  }
-  
-  .tree li a {
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    text-decoration: none;
-    color: #666;
-    font-family: arial, verdana, tahoma;
-    font-size: 11px;
-    display: inline-block;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-  }
-  
-  .tree li a:hover,
-  .tree li a:hover+ul li a {
-    background: #c8e4f8;
-    color: #000;
-    border: 5px solid #94a0b4;
-  }
-  
-  .tree li a:hover+ul li::after,
-  .tree li a:hover+ul li::before,
-  .tree li a:hover+ul::before,
-  .tree li a:hover+ul ul::before {
-    border-color: #94a0b4;
-  }
-  
-  .circle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin: 10px;
-  }
-  
-  .circle img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .circle span {
-    text-align: center;
-    font-size: 12px;
-  }
-  
-  
+  margin: 0;
+  padding: 0;
+}
+
+.tree {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+}
+
+.tree li::before,
+.tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 3px solid brown;
+  width: 50%;
+  height: 20px;
+  transition: all 0.5s;
+}
+
+.tree li::after {
+  right:auto;
+  left: 50%;
+  border-left: 3px solid brown;
+}
+
+.tree li:hover::before,
+.tree li:hover::after {
+  border-color: brown;
+}
+
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree li:last-child::before {
+  border-right: 3px solid brown;
+  border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 3px solid brown;
+  width: 0;
+  height: 20px;
+}
+
+.tree li a {
+  border: 1px solid #0a0101;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #500202;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.tree li a:hover,
+.tree li a:hover+ul li a {
+  background: #40e20f;
+  color: #000;
+  border: 5px solid brown;
+}
+
+.tree li a:hover+ul li::after,
+.tree li a:hover+ul li::before,
+.tree li a:hover+ul::before,
+.tree li a:hover+ul ul::before {
+  border-color: #360101;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: green;
+  margin: 10px;
+}
+
+.circle img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.circle span {
+  text-align: center;
+  font-size: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f7f7f7d3;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: #2e2c2c;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px #c5d8d8;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile h1 {
+  font-size: 28px;
+  margin-left: 10px;
+  color: #333;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.biography h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.biography p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+.biography h2:not(:first-child),
+.biography p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.biography h2:first-child {
+  margin-top: 0;
+}
+
+.biography p:last-child {
+  margin-bottom: 0;
+}
+
+.audio-box {
+  margin-top: 20px;
+}
+
+/* Add more dynamic styles */
+
+/* Example dynamic styles */
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.navbar {
+  background-color: #444;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.biography p {
+  color: #777;
+}
+
+
+
+
+
