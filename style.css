@@ -203,13 +203,13 @@ nav ul li a {
   color: #333;
 }
 
-.biography p {
+ .biography p {
   margin-bottom: 20px;
   font-size: 16px;
   color: #555;
 }
 
-.biography h2:not(:first-child),
+.biography  h2:not(:first-child),
 .biography p:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -256,6 +256,183 @@ h1 {
 .biography p {
   color: #777;
 }
+
+
+
+/* style file feedeenakang.html */
+
+canvas {
+  width:250px;
+  display: block;
+}
+.record {
+  width: 250px;
+  height: 40px;
+  border: 1px solid lightblue;
+  text-align:center;
+  line-height: 2.4em;
+  display:block;
+}
+
+.stop {
+  width: 250px;
+  height: 40px;
+  border: 1px solid pink;
+  text-align:center;
+  line-height: 2.4em;
+}
+
+
+/* css for donation file  */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 5px 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+
+
+/* css for yewtere pular  */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em
+}
+
+body{
+  background: #D7423C;
+  box-sizing: border-box;
+}
+section{
+  padding: 10% 20%;
+}
+.animate{
+  transition: all .3s;
+}
+
+input[name=question]{
+    display: none;
+}
+input[name=question] + label{
+    position: relative;
+    display: block;
+    padding: 20px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: rgba(246, 246, 246, 1);
+    color: #5a9aa8;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    border-radius: 3px;
+    margin-bottom: 10px; /* Add margin-bottom to create space between labels */
+
+}
+
+.response{
+    position: relative;
+    background: #7B2623;
+    color: #7A2723;
+    padding: 10px 20px;
+    -webkit-transform: translate3d(0,-40px, 0) rotate(-.5deg);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    opacity: 0;
+    border-radius: 3px;
+}
+
+input[name=question]:checked + label{
+    background: #F6F6F6;
+    color: #5a9aa8;
+}
+input[name=question]:checked + label + .response{
+    opacity: 1;
+    visibility: visible;
+    padding: 10px 20px;
+    -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
+    -webkit-filter: blur(0px);
+    margin-bottom: 20px;
+    color: white;
+}
+
+.fixed-height{
+    height: 50px;
+    overflow: hidden;
+    opacity: 1 !important;
+}
+
+.a7a {
+  width: 180px; /* Adjust the width as per your preference */
+  height: 80px;
+}
+.a7b {
+  width: 180px; /* Adjust the width as per your preference */
+  height: 80px;
+}
+
+
+.history {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-left: 65px;
+  margin-right: 65px;
+}
+
+.history h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.history h4 {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #555;
+}
+
+.history audio {
+  margin-top: 10px;
+}
+
+
 
 
 
