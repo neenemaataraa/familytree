@@ -192,4 +192,43 @@ function visualize(stream) {
     });
 
 
-    
+   // Function to switch the language and update the content
+function switchLanguage(language) {
+  // Update the content based on the selected language
+  if (language === 'fr') {
+    document.documentElement.lang = 'fr';
+    document.title = 'Neene Maatara (French)';
+    // Update other French content here
+  } else {
+    document.documentElement.lang = 'en';
+    document.title = 'Neene Maatara';
+    // Update other English content here
+  }
+
+  // Remove the 'active' class from all language links
+  const languageLinks = document.querySelectorAll('.language-link');
+  languageLinks.forEach(link => {
+    link.classList.remove('active');
+  });
+
+  // Add the 'active' class to the clicked language link
+  const activeLink = document.querySelector(`[data-language="${language}"]`);
+  activeLink.classList.add('active');
+}
+
+// Function to add click event listeners to language links
+function addLanguageLinkListeners() {
+  const languageLinks = document.querySelectorAll('.language-link');
+  languageLinks.forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const language = link.getAttribute('data-language');
+      switchLanguage(language);
+    });
+  });
+}
+
+// Call the function to add click event listeners to language links when the page is loaded
+window.addEventListener('load', () => {
+  addLanguageLinkListeners();
+});

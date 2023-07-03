@@ -434,7 +434,48 @@ input[name=question]:checked + label + .response{
 
 
 
+/* Your existing CSS styles */
+/* ... */
 
+/* Additional styles for the language links */
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  /* This will place the language links to the right */
+}
 
+.language-link {
+  /* Add any additional styling for the language links here */
+  /* For example, you can add padding, margins, etc. */
+  position: relative;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.language-link a {
+  color: white; /* Default color for the language links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.language-link.active a {
+  color: #007bff; /* Active color for the current language link */
+}
+
+.language-link a:hover {
+  color: #007bff; /* Color on hover for the language links */
+}
+
+/* Add a small indicator to show the active language */
+.language-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 2px;
+  background-color: #007bff;
+}
 
 

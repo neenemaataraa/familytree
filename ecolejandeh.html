@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Welcome to My Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .custom-nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .custom-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .custom-nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .custom-nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        .custom-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .custom-nav ul li a:hover {
+            color: #bbb;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .visualizer, .sound-clips {
+            margin-top: 20px;
+        }
+
+        .video-container {
+            margin-top: 20px;
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+        }
+
+        .custom-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="custom-nav">
+        <ul>
+            <li><a href="index.html">Back</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <canvas class="visualizer" width="400" height="100"></canvas>
+        <button class="record">RECORD</button>
+        <button class="stop">STOP</button>
+        <div class="sound-clips"></div>
+    </div>
+    <h6>How to Create Different Languages for My Website</h6>
+
+    <div class="video-container">
+
+        <video controls class="custom-video">
+            <!-- H.265 + MP3 (MP4) -->
+            <source src="./video/change_lang_to_fr.mp4" type="video/mp4">
+            <!-- WebM (VP9) -->
+            <source src="./video/video1.webm" type="video/webm">
+            <!-- Optional: Ogg (Theora/Vorbis) -->
+            <source src="./video/video1.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script src="./adapter-master/"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
