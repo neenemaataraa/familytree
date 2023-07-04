@@ -145,6 +145,20 @@
       }
     }
 
+    .video-container {
+            margin-top: 20px;
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+        }
+
+        .custom-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     
     
     /* Style to make the video container responsive */
@@ -516,7 +530,7 @@ surtinirteh dnong ndiang dang ka wade teh dong leyi leyi dong ong kodung dong wi
 
     <div class="video-container">
 
-        <video controls class="custom-video">
+        <video controls muted playsinline webkit-playsinline class="custom-video">
             <!-- H.265 + MP3 (MP4) -->
             <source src="./video/change lang to fr.mp4" type="video/mp4">
             <!-- WebM (VP9) -->
