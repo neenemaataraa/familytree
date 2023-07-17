@@ -232,3 +232,18 @@ function addLanguageLinkListeners() {
 window.addEventListener('load', () => {
   addLanguageLinkListeners();
 });
+
+
+// deena script starts
+
+const imageWrapper = document.querySelector('.image-wrapper');
+const audio = document.getElementById('bottom-audio');
+
+imageWrapper.addEventListener('mouseenter', () => {
+  audio.play();
+});
+
+imageWrapper.addEventListener('mouseleave', () => {
+  audio.pause();
+  audio.currentTime = 0;
+});
